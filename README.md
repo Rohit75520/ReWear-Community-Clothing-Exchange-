@@ -1,42 +1,53 @@
-ReWear - Sustainable Fashion Exchange Platform
+# ReWear - Sustainable Fashion Exchange Platform
+
 A comprehensive full-stack web application that promotes sustainable fashion through community-driven clothing exchanges. Built with React, TypeScript, Firebase, and Tailwind CSS.
 
-🌟 Features
-Phase 1: Authentication & User Profiles
-Secure Firebase Authentication with email/password
-Role-based access control (user/admin)
-User profile management with points tracking
-Protected routes and middleware
-Phase 2: Clothing Item Listings
-Upload clothing items with multiple images
-Firebase Storage integration for image handling
-Advanced filtering and search functionality
-Category and size-based organization
-AI-powered placeholder image generation
-Phase 3: Swaps & Point Redemption
-Direct item swapping between users
-Points-based redemption system
-Transaction history and tracking
-Real-time swap request management
-Phase 4: Admin Controls & Moderation
-Comprehensive admin dashboard
-User management and role assignment
-Content moderation and approval workflows
-Analytics and reporting
-Phase 5: Advanced Features
-Firebase Storage for secure file uploads
-AI image generation integration
-Real-time notifications
-Responsive design for all devices
-🚀 Tech Stack
-Frontend: React 18, TypeScript, Tailwind CSS
-Backend: Firebase (Firestore, Auth, Storage)
-Routing: React Router v6
-State Management: React Context API
-UI Components: Lucide React icons
-Notifications: React Hot Toast
-Build Tool: Vite
-📁 Project Structure
+## 🌟 Features
+
+### Phase 1: Authentication & User Profiles
+- Secure Firebase Authentication with email/password
+- Role-based access control (user/admin)
+- User profile management with points tracking
+- Protected routes and middleware
+
+### Phase 2: Clothing Item Listings
+- Upload clothing items with multiple images
+- Firebase Storage integration for image handling
+- Advanced filtering and search functionality
+- Category and size-based organization
+- AI-powered placeholder image generation
+
+### Phase 3: Swaps & Point Redemption
+- Direct item swapping between users
+- Points-based redemption system
+- Transaction history and tracking
+- Real-time swap request management
+
+### Phase 4: Admin Controls & Moderation
+- Comprehensive admin dashboard
+- User management and role assignment
+- Content moderation and approval workflows
+- Analytics and reporting
+
+### Phase 5: Advanced Features
+- Firebase Storage for secure file uploads
+- AI image generation integration
+- Real-time notifications
+- Responsive design for all devices
+
+## 🚀 Tech Stack
+
+- **Frontend**: React 18, TypeScript, Tailwind CSS
+- **Backend**: Firebase (Firestore, Auth, Storage)
+- **Routing**: React Router v6
+- **State Management**: React Context API
+- **UI Components**: Lucide React icons
+- **Notifications**: React Hot Toast
+- **Build Tool**: Vite
+
+## 📁 Project Structure
+
+```
 src/
 ├── components/
 │   ├── Layout/
@@ -63,40 +74,57 @@ src/
 ├── config/
 │   └── firebase.ts
 └── App.tsx
-🔧 Setup Instructions
-Clone and Install
+```
 
-npm install
-Firebase Configuration
+## 🔧 Setup Instructions
 
-Create a Firebase project at https://console.firebase.google.com
-Enable Authentication, Firestore, and Storage
-Update src/config/firebase.ts with your Firebase config
-Deploy the Firestore security rules from firestore.rules
-Deploy the Storage security rules from storage.rules
-Environment Setup
+1. **Clone and Install**
+   ```bash
+   npm install
+   ```
 
-# Update Firebase config in src/config/firebase.ts
-# No additional environment variables needed
-Development
+2. **Firebase Configuration**
+   - Create a Firebase project at https://console.firebase.google.com
+   - Enable Authentication, Firestore, and Storage
+   - Update `src/config/firebase.ts` with your Firebase config
+   - Deploy the Firestore security rules from `firestore.rules`
+   - Deploy the Storage security rules from `storage.rules`
 
-npm run dev
-Build for Production
+3. **Environment Setup**
+   ```bash
+   # Update Firebase config in src/config/firebase.ts
+   # No additional environment variables needed
+   ```
 
-npm run build
-🔒 Security
-Firestore Rules: Comprehensive security rules ensuring users can only access their own data
-Storage Rules: Secure file upload permissions with authentication
-Role-based Access: Admin-only routes and functions
-Input Validation: Frontend and backend validation for all user inputs
-🎨 Design Features
-Sustainable Theme: Earth-tone color palette promoting eco-consciousness
-Responsive Design: Mobile-first approach with tablet and desktop optimization
-Smooth Animations: Micro-interactions and hover effects
-Accessibility: WCAG compliant color contrast and semantic HTML
-Modern UI: Clean cards, intuitive navigation, and professional layouts
-📊 Data Schema
-Users Collection
+4. **Development**
+   ```bash
+   npm run dev
+   ```
+
+5. **Build for Production**
+   ```bash
+   npm run build
+   ```
+
+## 🔒 Security
+
+- **Firestore Rules**: Comprehensive security rules ensuring users can only access their own data
+- **Storage Rules**: Secure file upload permissions with authentication
+- **Role-based Access**: Admin-only routes and functions
+- **Input Validation**: Frontend and backend validation for all user inputs
+
+## 🎨 Design Features
+
+- **Sustainable Theme**: Earth-tone color palette promoting eco-consciousness
+- **Responsive Design**: Mobile-first approach with tablet and desktop optimization
+- **Smooth Animations**: Micro-interactions and hover effects
+- **Accessibility**: WCAG compliant color contrast and semantic HTML
+- **Modern UI**: Clean cards, intuitive navigation, and professional layouts
+
+## 📊 Data Schema
+
+### Users Collection
+```typescript
 {
   uid: string;
   name: string;
@@ -106,7 +134,10 @@ Users Collection
   avatarUrl?: string;
   createdAt: Date;
 }
-Items Collection
+```
+
+### Items Collection
+```typescript
 {
   id: string;
   title: string;
@@ -122,7 +153,10 @@ Items Collection
   pointValue: number;
   createdAt: Date;
 }
-Swaps Collection
+```
+
+### Swaps Collection
+```typescript
 {
   id: string;
   itemId: string;
@@ -134,30 +168,47 @@ Swaps Collection
   message?: string;
   createdAt: Date;
 }
-🌐 Deployment
-Frontend (Vercel)
+```
+
+## 🌐 Deployment
+
+### Frontend (Vercel)
+```bash
 # Connect your GitHub repo to Vercel
 # Automatic deployments on push to main branch
-Backend (Firebase)
+```
+
+### Backend (Firebase)
+```bash
 # Install Firebase CLI
 npm install -g firebase-tools
 
 # Login and deploy
 firebase login
 firebase deploy
-🤝 Contributing
-Fork the repository
-Create a feature branch
-Commit your changes
-Push to the branch
-Create a Pull Request
-📄 License
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## 📄 License
+
 This project is licensed under the MIT License.
 
-🔮 Future Enhancements
- Mobile app development
- Integration with shipping services
- Advanced AI recommendations
- Social features and user reviews
- Sustainability impact tracking
- Multi-language support
+## 🔮 Future Enhancements
+
+- [ ] Mobile app development
+- [ ] Integration with shipping services
+- [ ] Advanced AI recommendations
+- [ ] Social features and user reviews
+- [ ] Sustainability impact tracking
+- [ ] Multi-language support
+
+---
+
+Built with ❤️ for sustainable fashion and environmental consciousness.
