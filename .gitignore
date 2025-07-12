@@ -1,0 +1,41 @@
+# Node.js
+node_modules/
+npm-debug.log
+.env
+
+# Logs
+logs/
+*.log
+
+# Uploaded files (if using local storage)
+uploads/
+
+# Dependency files
+# yarn.lock
+# .pnp/
+# .pnp.js
+
+# Testing
+/coverage
+/.nyc_output
+
+# Production deployments (optional)
+/build
+/dist
+/tmp
+
+# Editor directories and files
+.idea/             # JetBrains IDEs (IntelliJ, WebStorm, etc.)
+.vscode/           # VS Code
+*.sublime-project
+*.sublime-workspace
+.DS_Store          # macOS specific
+Thumbs.db          # Windows specific
+
+# Environment specific files (if you have them)
+*.sqlite
+*.sqlite-journal
+
+# Compiled TypeScript files (if you decide to use TypeScript later)
+*.js.map
+*.d.ts
